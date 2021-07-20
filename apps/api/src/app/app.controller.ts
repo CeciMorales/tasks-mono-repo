@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 
-import { Message } from '@tasks-app/api-interfaces';
+import { Message, Task } from '@tasks-app/api-interfaces';
 
 import { AppService } from './app.service';
 
@@ -11,5 +11,11 @@ export class AppController {
   @Get('hello')
   getData(): Message {
     return this.appService.getData();
+  }
+
+  @Get('tasks')
+  getTasks(): Task[] {
+    return this.appService.getTasks();
+
   }
 }

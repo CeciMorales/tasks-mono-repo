@@ -7,3 +7,14 @@
   />
 </div>
 <div>Message: {{ hello$ | async | json }}</div>
+<!--<div *ngIf="tasks$ | async as tasksInfo">-->
+  <div *ngFor="let task of tasks$ | async">
+    <p>{{ task.id }}</p>
+    <p>{{ task.description }}</p>
+    <img src={{task.image}}>
+
+    <p>fav: {{ task.favorite }}</p>
+
+  </div>
+  
+<!--</div>-->
