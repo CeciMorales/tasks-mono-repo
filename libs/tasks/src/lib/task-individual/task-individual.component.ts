@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Task } from '@tasks-app/api-interfaces';
 
 @Component({
   selector: 'tasks-app-task-individual',
@@ -7,6 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskIndividualComponent implements OnInit {
 
+  @Input() task: Task = {
+    id: '',
+    description: '',
+    image: '',
+    favorite: false,
+    completed: false
+  }
   constructor() { }
 
   ngOnInit(): void {

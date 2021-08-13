@@ -1,6 +1,7 @@
 import { Controller, Get } from '@nestjs/common';
 
 import { Message, Task } from '@tasks-app/api-interfaces';
+import { Observable } from 'rxjs';
 
 import { AppService } from './app.service';
 
@@ -14,7 +15,7 @@ export class AppController {
   }
 
   @Get('tasks')
-  getTasks(): Task[] {
+  getTasks(): Observable<Task[]> {
     return this.appService.getTasks();
 
   }

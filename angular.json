@@ -84,7 +84,7 @@
               "apps/normal-user/src/favicon.ico",
               "apps/normal-user/src/assets"
             ],
-            "styles": ["apps/normal-user/src/styles.scss"],
+            "styles": ["./node_modules/@angular/material/prebuilt-themes/indigo-pink.css", "apps/normal-user/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -235,6 +235,7 @@
     }
   },
   "cli": {
+    "analytics": "7d0fcb73-6656-467e-9c00-6df3992a275e",
     "defaultCollection": "@nrwl/angular"
   },
   "schematics": {

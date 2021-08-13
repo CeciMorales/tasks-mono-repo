@@ -1,1 +1,4 @@
-<p>tasks-list works!</p>
+<div *ngFor="let task of tasks$ | async">
+    <tasks-app-task-individual [task]="task"></tasks-app-task-individual>
+
+</div>

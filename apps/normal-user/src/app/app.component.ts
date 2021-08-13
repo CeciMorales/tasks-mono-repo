@@ -9,6 +9,5 @@ import { Message, Task } from '@tasks-app/api-interfaces';
 })
 export class AppComponent {
   hello$ = this.http.get<Message>('/api/hello');
-  tasks$ = this.http.get<Task[]>('/api/tasks');
   constructor(private http: HttpClient) {}
 }

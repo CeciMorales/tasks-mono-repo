@@ -3,4 +3,5 @@ export interface Task {
     description: string;
     image?: string;
     favorite: boolean;
+    completed: boolean;
 }
